@@ -1,3 +1,16 @@
 body{
     background-color: gainsboro;
 }
+img{
+    width: 175px;
+    padding: 10px;
+    border: 2px solid darkgray;
+}
+.pets {
+    background-color: whitesmoke;
+    border: 2px solid darkgray;
+    width: 300px;
+    margin: 10px;
+    padding: 10px; 
+    text-align: center;
+  }
