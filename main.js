@@ -19,7 +19,42 @@ const pets = [
       specialSkill: "Can prove he is a real man by drinking whiskey.",
       type: "dino",
       imageUrl: "https://mydinosaurs.com/wp-content/uploads/2017/02/2-3-600x400.jpg"
-    }
+    },
+    {
+        name: "Spooky",
+        color: "Brown",
+        specialSkill: "Comfortable in the outdoors for up to eight hours.",
+        type: "cat",
+        imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"
+    },
+    {
+        name: "Tiger",
+        color: "Black",
+        specialSkill: "Can read (but cannot understand) Hebrew.",
+        type: "dog",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg"
+    },
+    {
+        name: "Oreo",
+        color: "Yellow",
+        specialSkill: "Able to stop chewing ice or whistling on request.",
+        type: "cat",
+        imageUrl: "https://i.pinimg.com/originals/9d/da/3e/9dda3e5fd2b9886fc3d13ee47f52e8a0.jpg"
+    },
+    {
+        name: "Ginger",
+        color: "Grey",
+        specialSkill: "Comfortable in the outdoors for up to eight hours.",
+        type: "dino",
+        imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
+    },
+    {
+        name: "Sassy",
+        color: "Poop-Colored",
+        specialSkill: "Adept at talking self and others out of fights.",
+        type: "cat",
+        imageUrl: "https://tailandfur.com/wp-content/uploads/2015/09/40-Amazing-Cat-Funny-Moment-Pictures-Feature-Image.jpg"
+    },
 ]
 
 const printToDom = (selector, textToPrint) => {
@@ -33,10 +68,10 @@ const buildPetCards = () => {
     for (let i = 0; i < pets.length; i++) {
       domString += '<div class="pets">';
       domString += `<h3 class="petsName">${pets[i].name}</h3>`;
-      domString += `<img src="${pets[i].imageUrl}" alt="Pet image">`
+      domString += `<img src="${pets[i].imageUrl}" id="${pets[i].type}">`
       domString += `<p class="petColor">${pets[i].color}</p>`
       domString += `<p class="special">${pets[i].specialSkill}</p>`
-      domString += `<h5>${pets[i].type}</h5>`
+      domString += `<h5 class="${pets[i].type}"> ${pets[i].type} </h5>`
       domString += '</div>';
     }
   
