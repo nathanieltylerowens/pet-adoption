@@ -1,6 +1,7 @@
 body{
     background-color: gainsboro;
-    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 }
 img{
     width: 300px;
@@ -21,6 +22,16 @@ p{
     font-size: 13pt;
     font-family: 'DM Sans', Helvetica, sans-serif;
     padding: 3px;
+}
+.buttons{
+    margin: 0px 0px 15px 0px;
+}
+.textButtons{
+    margin: 8px;
+    padding: 1em;
+    color: whitesmoke;
+    font-family: 'Lexend Giga', Helvetica, sans-serif;
+    font-weight: bold;
 }
 .cat{
     color: darkslategray;
@@ -69,6 +80,18 @@ p{
 #dino{
     background-color: #fac19c;
     /* border: 5px solid orangered; */
+}
+#catButton{
+    background-color: lightblue;
+}
+#dinoButton{
+    background-color: #fac19c;
+}
+#dogButton{
+    background-color: lightgreen;
+}
+#allButton{
+    background-color: slategray;
 }
 #pet-card{
     display: flex;
