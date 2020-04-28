@@ -69,28 +69,28 @@ p{
     color: whitesmoke;
     background-color: slategray;
 }
-#cat{
+#catCard{
     background-color: lightblue;
     /* border: 5px solid darkslategray; */
 }
-#dog{
+#dogCard{
     background-color: lightgreen;
     /* border: 5px solid seagreen; */
 }
-#dino{
+#dinoCard{
     background-color: #fac19c;
     /* border: 5px solid orangered; */
 }
-#catButton{
+#cat{
     background-color: lightblue;
 }
-#dinoButton{
+#dino{
     background-color: #fac19c;
 }
-#dogButton{
+#dog{
     background-color: lightgreen;
 }
-#allButton{
+#all{
     background-color: slategray;
 }
 #pet-card{
