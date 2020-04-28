@@ -68,7 +68,7 @@ const buildPetCards = () => {
     for (let i = 0; i < pets.length; i++) {
       domString += '<div class="pets">';
       domString += `<h3 class="petsName">${pets[i].name}</h3>`;
-      domString += `<img src="${pets[i].imageUrl}" id="${pets[i].type}">`
+      domString += `<img src="${pets[i].imageUrl}" id="${pets[i].type}Card">`
       domString += `<p class="petColor">${pets[i].color}</p>`
       domString += `<p class="special">${pets[i].specialSkill}</p>`
       domString += `<h5 class="${pets[i].type}"> ${pets[i].type} </h5>`
@@ -77,9 +77,34 @@ const buildPetCards = () => {
   
     printToDom('#pet-card', domString);
   }
+
+  const filtersPetsEvents = (event) => {
+    const buttonId = event.target.id;
+    const tempPetCollection = [];
+
+    if (buttonId === 'all') {
+        buildPetCards(pets);
+        return;
+    }
+
+   for (let i=0; i < pets.length; i++) {
+    if (pets[i].type === buttonId){
+        tempPetCollection.push(pets[i]);
+    }
+   }
+   buildPetCards(tempPetCollection);
+}
+
+const clickEvent = () => {
+    document.querySelector('#cat').addEventListener('click', filtersPetsEvents);
+    document.querySelector('#dog').addEventListener('click', filtersPetsEvents);
+    document.querySelector('#dino').addEventListener('click', filtersPetsEvents);
+    document.querySelector('#all').addEventListener('click', filtersPetsEvents);
+}
   
 const init = () => {
     buildPetCards();
+    clickEvent();
   }
   
   init();
