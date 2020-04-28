@@ -66,13 +66,13 @@ const buildPetCards = () => {
     let domString = '';
   
     for (let i = 0; i < pets.length; i++) {
-      domString += '<div class="pets">';
+      domString += `<div class="pets">`;
       domString += `<h3 class="petsName">${pets[i].name}</h3>`;
       domString += `<img src="${pets[i].imageUrl}" id="${pets[i].type}Card">`
       domString += `<p class="petColor">${pets[i].color}</p>`
       domString += `<p class="special">${pets[i].specialSkill}</p>`
       domString += `<h5 class="${pets[i].type}"> ${pets[i].type} </h5>`
-      domString += '</div>';
+      domString += `</div>`;
     }
   
     printToDom('#pet-card', domString);
@@ -103,7 +103,7 @@ const clickEvent = () => {
 }
   
 const init = () => {
-    buildPetCards();
+    buildPetCards(pets);
     clickEvent();
   }
   
