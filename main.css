@@ -23,11 +23,8 @@ p{
     font-family: 'DM Sans', Helvetica, sans-serif;
     padding: 3px;
 }
-.buttons{
+.buttons button{
     margin: 0px 0px 15px 0px;
-}
-.textButtons{
-    margin: 8px;
     padding: 1em;
     color: whitesmoke;
     font-family: 'Lexend Giga', Helvetica, sans-serif;
