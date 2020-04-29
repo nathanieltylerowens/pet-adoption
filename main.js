@@ -3,7 +3,7 @@ const pets = [
       name: "Dusty",
       color: "Green",
       specialSkill: "Gives sincere apologies.",
-      type: "cat",
+      type: 'cat',
       imageUrl: "http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg"
     },
     {
@@ -24,7 +24,7 @@ const pets = [
         name: "Spooky",
         color: "Brown",
         specialSkill: "Comfortable in the outdoors for up to eight hours.",
-        type: "cat",
+        type: 'cat',
         imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"
     },
     {
@@ -38,7 +38,7 @@ const pets = [
         name: "Oreo",
         color: "Yellow",
         specialSkill: "Able to stop chewing ice or whistling on request.",
-        type: "cat",
+        type: 'cat',
         imageUrl: "https://i.pinimg.com/originals/9d/da/3e/9dda3e5fd2b9886fc3d13ee47f52e8a0.jpg"
     },
     {
@@ -52,7 +52,7 @@ const pets = [
         name: "Sassy",
         color: "Poop-Colored",
         specialSkill: "Adept at talking self and others out of fights.",
-        type: "cat",
+        type: 'cat',
         imageUrl: "https://tailandfur.com/wp-content/uploads/2015/09/40-Amazing-Cat-Funny-Moment-Pictures-Feature-Image.jpg"
     },
 ]
@@ -62,7 +62,7 @@ const printToDom = (selector, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
   }
   
-const buildPetCards = () => {
+const buildPetCards = (pets) => {
     let domString = '';
   
     for (let i = 0; i < pets.length; i++) {
@@ -79,21 +79,21 @@ const buildPetCards = () => {
   }
 
   const filtersPetsEvents = (event) => {
-    const buttonId = event.target.id;
+      buttonId = event.target.id
     const tempPetCollection = [];
 
     if (buttonId === 'all') {
         buildPetCards(pets);
         return;
+    }    
+    for (let i=0; i < pets.length; i++){
+        if (pets[i].type === buttonId){
+            tempPetCollection.push(pets[i]);
+        }
     }
-
-   for (let i=0; i < pets.length; i++) {
-    if (pets[i].type === buttonId){
-        tempPetCollection.push(pets[i]);
-    }
-   }
-   buildPetCards(tempPetCollection);
-}
+    buildPetCards(tempPetCollection);
+  }
+  
 
 const clickEvent = () => {
     document.querySelector('#cat').addEventListener('click', filtersPetsEvents);
@@ -107,4 +107,4 @@ const init = () => {
     clickEvent();
   }
   
-  init();
+init();
